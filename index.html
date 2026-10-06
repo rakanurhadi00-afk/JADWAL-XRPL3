@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Kelas X RPL 3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ================= LOADING SCREEN ================= -->
+    <div class="loader-screen" id="loader">
+
+        <!-- Background -->
+        <div class="grid"></div>
+        <div class="noise"></div>
+
+        <!-- Floating particles -->
+        <div class="particles"></div>
+
+        <!-- Top information -->
+        <div class="top-info">
+            <span>CLASS SYSTEM</span>
+            <span id="systemTime">00:00:00</span>
+        </div>
+
+        <!-- Main loader -->
+        <div class="loader-center">
+
+            <div class="orbit-system">
+
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <div class="orbit orbit-three"></div>
+
+                <div class="core">
+
+                    <div class="core-inner">
+                        <span>X RPL</span>
+                        <small>3</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="class-name">
+                <span class="mini">WELCOME TO</span>
+                <h1>X <b>RPL</b> 3</h1>
+                <p>CLASS DIGITAL SYSTEM</p>
+            </div>
+
+            <!-- Loading status -->
+            <div class="status">
+
+                <div class="status-top">
+                    <span id="statusText">
+                        Initializing system...
+                    </span>
+
+                    <span>
+                        <b id="percent">0</b>%
+                    </span>
+                </div>
+
+                <div class="progress">
+                    <div id="progress"></div>
+                    <div class="progress-glow"></div>
+                </div>
+
+            </div>
+
+            <!-- Loading dots -->
+            <div class="loading-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+
+        <!-- Bottom information -->
+        <div class="bottom-info">
+
+            <div>
+                <span>SYSTEM</span>
+                <b>ONLINE</b>
+            </div>
+
+            <div>
+                <span>SECURITY</span>
+                <b>ACTIVE</b>
+            </div>
+
+            <div>
+                <span>VERSION</span>
+                <b>2.0.3</b>
+            </div>
+
+        </div>
+
+    </div>
+
+
+<nav>
+    <div class="logo">
+        <i class="fa-solid fa-graduation-cap"></i> X RPL 3
+    </div>
+    <div class="nav-links" id="navMenu">
+        <a href="#home">Beranda</a>
+        <a href="#jadwal">Jadwal Pelajaran</a>
+        <a href="#piket">Piket</a>
+        <a href="#pengurus">Pengurus</a>
+
+    </div>
+    <button class="menu-btn" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+</nav>
+
+    <header id="home">
+        <div class="glow-circle"></div>
+        <span id="greeting">Selamat Datang</span>
+        <h1>Portal Kelas Masa Depan</h1>
+        <p class="hero-desc">
+            Website resmi kelas X RPL 3. Tempat melihat jadwal, pengumuman, dan informasi kelas dengan antarmuka modern.
+        </p>
+        
+        <div class="glass clock-container">
+            <i class="fa-regular fa-clock clock-icon"></i>
+            <span id="clock">00:00:00</span>
+        </div>
+    </header>
+    
+         <!-- JADWAL PELAJARAN-->
+<section id="jadwal" class="container">
+    <h2 class="section-title">Jadwal Pelajaran</h2>
+    
+    <div class="tabs">
+        <button class="tab-btn active" onclick="gantiHari('Senin', this)">Senin</button>
+        <button class="tab-btn" onclick="gantiHari('Selasa', this)">Selasa</button>
+        <button class="tab-btn" onclick="gantiHari('Rabu', this)">Rabu</button>
+        <button class="tab-btn" onclick="gantiHari('Kamis', this)">Kamis</button>
+        <button class="tab-btn" onclick="gantiHari('Jumat', this)">Jum'at</button>
+        <button class="tab-btn" onclick="gantiHari('Sabtu', this)">Sabtu</button>
+    </div>
+
+    <div id="wadah-jadwal" class="schedule-grid"></div>
+</section>
+        <!-- JADWAL PIKET -->
+    <section id="piket" class="container">
+        <h2 class="section-title">Jadwal Piket Harian</h2>
+        <div class="piket-grid">
+            <div class="glass piket-card">
+                <h3 class="piket-day day-senin">Senin</h3>
+                <ul class="piket-list">
+                    <li><i class="fa-solid fa-user-check"></i> Al Parizki</li>
+                    <li><i class="fa-solid fa-user-check"></i> Ega Pratama</li>
+                    <li><i class="fa-solid fa-user-check"></i> Nanda Sunara</li>
+                    <li><i class="fa-solid fa-user-check"></i> Devi Lutfiani</li>
+                    <li><i class="fa-solid fa-user-check"></i> Nur Riyanti Maelani</li>
+                    <li><i class="fa-solid fa-user-check"></i> Sinta Ramadhani Fitria</li>
+                    <li><i class="fa-solid fa-user-check"></i> Vani</li>
+                    <li><i class="fa-solid fa-user-check"></i> Ayu yulianti</li>
+                </ul>
+            </div>
+
+            <div class="glass piket-card">
+                <h3 class="piket-day day-selasa">Selasa</h3>
+                <ul class="piket-list">
+                    <li><i class="fa-solid fa-user-check"></i> ANDIKA SAPUTRA EFFENDI</li>
+                    <li><i class="fa-solid fa-user-check"></i> Ezra arshavien</li>
+                    <li><i class="fa-solid fa-user-check"></i> Raka Nurhadi</li>
+                    <li><i class="fa-solid fa-user-check"></i> Dina  Agustiani</li>
+                    <li><i class="fa-solid fa-user-check"></i> Desi Refiyanti</li>
+                    <li><i class="fa-solid fa-user-check"></i> Soni Nuryanti</li>
+                    <li><i class="fa-solid fa-user-check"></i> Najwa Nur Kholifah</li>
+                </ul>
+            </div>
+
+            <div class="glass piket-card">
+                <h3 class="piket-day day-rabu">Rabu</h3>
+                <ul class="piket-list">
+                    <li><i class="fa-solid fa-user-check"></i>Anggi pahluroji</li>
+                    <li><i class="fa-solid fa-user-check"></i> SEFA ADI PERMANA</li>
+                    <li><i class="fa-solid fa-user-check"></i>Idan Setiawan</li>
+                    <li><i class="fa-solid fa-user-check"></i>Neng Fitri</li>
+                    <li><i class="fa-solid fa-user-check"></i>Regina Mutiara</li>
+                    <li><i class="fa-solid fa-user-check"></i>Syafa Hana Lestari</li>
+                    <li><i class="fa-solid fa-user-check"></i>Maryati</li>
+                </ul>
+            </div>
+
+            <div class="glass piket-card">
+                <h3 class="piket-day day-kamis">Kamis</h3>
+                <ul class="piket-list">
+                    <li><i class="fa-solid fa-user-check"></i>Dicka sopandi</li>
+                    <li><i class="fa-solid fa-user-check"></i>Muhammad Saputra</li>
+                    <li><i class="fa-solid fa-user-check"></i>Nadia Minriadil Zanah</li>
+                    <li><i class="fa-solid fa-user-check"></i>Tarisa Nuraisah</li>
+                    <li><i class="fa-solid fa-user-check"></i>Nurvita Azahra</li>
+                    <li><i class="fa-solid fa-user-check"></i> Nita nurcahya</li>
+                </ul>
+            </div>
+
+            <div class="glass piket-card">
+                <h3 class="piket-day day-jumat">Jum'at</h3>
+                <ul class="piket-list">
+                    <li><i class="fa-solid fa-user-check"></i> SEMUA SISWA </li
+                </ul>
+            </div>
+
+            <div class="glass piket-card">
+                <h3 class="piket-day day-sabtu">Sabtu</h3>
+                <ul class="piket-list">
+                    <li><i class="fa-solid fa-user-check"></i>Dudit Zaelani</li>
+                    <li><i class="fa-solid fa-user-check"></i>Muhammad Rizky</li>
+                    <li><i class="fa-solid fa-user-check"></i>Nenden Gustiawati</li>
+                    <li><i class="fa-solid fa-user-check"></i>Silsi Melia</li>
+                    <li><i class="fa-solid fa-user-check"></i>Trisa Putri Wahyuni</li>
+                    <li><i class="fa-solid fa-user-check"></i>Alfyah Syahla</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="pengurus" class="container">
+        <h2 class="section-title">Pengurus Kelas</h2>
+        <div class="schedule-grid">
+             <div class="glass schedule-card text-center">
+                    <img src="https://cdn.phototourl.com/member/2026-09-28-d7f3e695-8727-4ea4-a62b-1da2c5e198a7.jpg" class="member-photo" alt="Ibu Sri">
+                <h3>IBU. SRI</h3>
+                <p class="role-text">Wali Kelas</p>
+            </div>
+             <div class="glass schedule-card text-center">
+                <img src="https://cdn.phototourl.com/member/2026-10-06-45512271-5764-49e1-865f-4ab30203cbca.jpg" class="member-photo" alt="Andika Saputra Effendi">
+                <h3>ANDIKA SAPUTRA EFFENDI</h3>
+                <p class="role-text">Ketua Kelas</p>
+            </div>
+             <div class="glass schedule-card text-center">
+                <img src="https://cdn.phototourl.com/member/2026-09-26-1c20f905-3ad9-4ac4-ab01-a9a734ff42a1.jpg" class="member-photo" alt="Raka Nurhadi">
+                <h3>RAKA NURHADI</h3>
+                <p class="role-text">Wakil Ketua Kelas</p>
+            </div>
+             <div class="glass schedule-card text-center">
+                <img src="https://cdn.phototourl.com/member/2026-10-06-1e13fc5d-4510-4080-830b-9e7a3049a78d.jpg" class="member-photo" alt="Dicka Sopandi">
+                <h3>Dicka Sopandi</h3>
+                <p class="role-text">Humas 1</p>
+            </div>
+             <div class="glass schedule-card text-center">
+                <img src="https://cdn.phototourl.com/member/2026-10-06-c8f90565-052a-4622-a065-799204d8b407.jpg" class="member-photo" alt="Muhammad Rizky">
+                <h3>Muhammad Rizky</h3>
+                <p class="role-text">Humas 2</p>
+            </div>
+             <div class="glass schedule-card text-center">
+                <img src="https://cdn.phototourl.com/member/2026-09-30-6585bf99-f7fa-4753-a9aa-92d32f20e22f.jpg" class="member-photo" alt="Nur Riyanti Maelani">
+                <h3>Nur Riyanti Maelani</h3>
+                <p class="role-text">Sekretaris 1</p>
+            </div>
+             <div class="glass schedule-card text-center">
+                <img src="https://cdn.phototourl.com/member/2026-10-06-f43941a7-0f6b-49eb-947f-6aabd5f7fd64.jpg" class="member-photo" alt="Najwa Nur Kholifah">
+                <h3>Najwa Nur Kholifah</h3>
+                <p class="role-text">Sekretaris 2</p>
+            </div>
+             <div class="glass schedule-card text-center">
+                <img src="https://cdn.phototourl.com/member/2026-10-06-e718ab0b-3cc1-4e33-9022-be6aef788348.jpg" class="member-photo" alt="Trisa Putri Wahyuni">
+                <h3>Trisa Putri Wahyuni</h3>
+                <p class="role-text">Bendahara 1</p>
+            </div>
+             <div class="glass schedule-card text-center">
+                <img src="https://cdn.phototourl.com/member/2026-09-30-e39f67bb-d94c-44a1-9aaf-ca1cc76c6c06.jpg" class="member-photo" alt="Eneng Fitriyani">
+                <h3>Eneng Fitriyani</h3>
+                <p class="role-text">Bendahara 2</p>
+            </div>
+            <div class="glass schedule-card text-center">
+                <img src="https://cdn.phototourl.com/member/2026-10-06-02e85d86-5161-4903-93ca-309f21b743d1.jpg" class="member-photo" alt="Soni Nuryanti">
+                <h3>Soni Nuryanti</h3>
+                <p class="role-text">Keamanan 1</p>
+            </div>
+            <div class="glass schedule-card text-center">
+                <img src="https://cdn.phototourl.com/member/2026-10-06-515e12ab-e0e9-4c3f-9ebe-0da7bfed5856.jpg" class="member-photo" alt="Nadia Minriadil Zanah">
+                <h3>Nadia Minriadil Zanah</h3>
+                <p class="role-text">Keamanan 2</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Kelas X RPL 3. Dibuat dengan HTML, CSS & JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
